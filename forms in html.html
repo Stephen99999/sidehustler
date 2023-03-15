@@ -1,101 +1,62 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@Stephen99999 
+AdepejuMary
+/
+Side-Hustle
+Public
+Fork your own copy of AdepejuMary/Side-Hustle
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Side-Hustle/Task1.html
+
+Adepeju First Commit
+Latest commit 19f148b 12 hours ago
+ History
+ 0 contributors
+33 lines (33 sloc)  1.34 KB
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>forms in html</title>
-    <style>
-      label {
-        display: block;
-        margin-bottom: 10px;
-      }
-      input[type="text"], input[type="email"], input[type="password"], select {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-      }
-      input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      input[type="submit"]:hover {
-        background-color: #45a049;
-      }
-      .error {
-        color: red;
-        margin-bottom: 10px;
-      }
-      .success {
-        color: green;
-        margin-bottom: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Simple Form</h1>
-    <form id="myForm" action="" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-      <label for="phone">Phone Number</label>
-      <input type="text" id="phone" name="phone" required>
-      <label for="gender">Gender</label>
-      <select id="gender" name="gender" required>
-        <option value="">Select Gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
-      <input type="submit" value="Submit">
-    </form>
-
-    <script>
-      const form = document.getElementById('myForm');
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const phoneInput = document.getElementById('phone');
-      const genderInput = document.getElementById('gender');
-      const passwordInput = document.getElementById('password');
-
-      form.addEventListener('submit', function(event) {
-        let hasError = false;
-
-        if (nameInput.value.trim() === '') {
-          nameInput.style.border = '1px solid red';
-          hasError = true;
-        } else {
-          nameInput.style.border = '1px solid #ccc';
-        }
-
-        if (emailInput.value.trim() === '') {
-          emailInput.style.border = '1px solid red';
-          hasError = true;
-        } else {
-          emailInput.style.border = '1px solid #ccc';
-        }
-
-        if (phoneInput.value.trim() === '') {
-          phoneInput.style.border = '1px solid red';
-          hasError = true;
-        } else {
-          phoneInput.style.border = '1px solid #ccc';
-        }
-
-        if (genderInput.value.trim() === '') {
-          genderInput.style.border = '1px solid red';
-          hasError = true;
-        } else {
-          genderInput.style.border = '1px solid #ccc';
-        }
-
-        if (passwordInput.value.trim() === '') {
-          passwordInput.style.border = '
+<html lang="en">
+    <head>
+        <title>Side Hustle Week 1 Task</title>
+    </head>
+    <body>
+        <h1>HTML form</h1>
+        <form action="/action_page.php" onsubmit="myFunction()">
+            <fieldset>
+                <legend>Biodata</legend>
+                <label for="fullname">Name:</label><br>
+                <input type="text" id="fullname" placeholder="Name"required ><br>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" placeholder="Email" required><br>
+                <label for="phone number">Phone Number:</label><br>
+                <input type="text" id="phone number" placeholder="Phone number" required><br>
+                Gender<br>
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="gender">Female</label>
+                <input type="radio" name="gender" id="female" value="female"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" id="name" required><br>
+                <input type="submit" value="Submit">
+             </fieldset>
+        </form>
+        <script>
+            function myFunction() {
+              alert("The form was submitted");
+            }
+            </script>
+    </body>
+</html>
